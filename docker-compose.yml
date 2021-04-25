@@ -1,0 +1,12 @@
+version: '2.4'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: analyze-it:latest
+    working_dir: /app
+    volumes:
+      - ./src:/app
+    ports:
+      - 8888:8888
